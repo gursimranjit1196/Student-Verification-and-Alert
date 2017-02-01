@@ -1,0 +1,42 @@
+{%extends 'welcome/bootstrap.html'%}
+{%block content%}
+
+{% if form.error %}
+	<p class="error"> not valid (user-id,pss)</p>
+{% endif %}
+<!---
+<form action="/signin/auth/" method="post">{% csrf_token %}
+<center><table>
+	<tr><td><label for="username">Username: </label></td>
+	<td><input type="text" name="username" value="" id="username"></td></tr>
+
+	<tr><td><label for="password">Password</label></td>
+	<td><input type="password" name="password" value="" id="password"></td></tr>
+
+	<tr><td></td><td><input type="submit" value="submit" /></td></tr>
+</table></center>
+</form>
+-->
+<form class="form-horizontal" action="/adminn/check/" method="post">{% csrf_token %}
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Username</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="username" name="username" placeholder="username">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+</form>
+
+{% endblock %}

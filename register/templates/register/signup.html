@@ -1,0 +1,133 @@
+{%extends 'welcome/bootstrap.html'%}
+{%block content%}
+<div style="text-align:center">
+<h1> Register here ... </h1>
+<!--
+<form method="POST" action=""> {% csrf_token %}
+<table style="width:100%">
+{{form.as_p}}
+</table>
+<input type="submit" name="submit">
+</form>
+-->
+
+<!--	
+<form action="" method="post">{% csrf_token %}
+<center>
+<table>
+
+	<tr><td><label for="first_name"> First Name: </label></td>
+	<td><input type="text" name="first_name" value="" id="first_name"></td></tr>
+
+	<tr><td><label for="last_name">Last Name</label></td>
+	<td><input type="text" name="last_name" value="" id="last_name"></td></tr>
+
+	<tr><td><label for="email"> Email: </label></td>
+	<td><input type="email" name="email" value="" id="email"></td></tr>
+
+	<tr><td><label for="contact">Contact</label></td>
+	<td><input type="text" name="contact" value="" id="contact"></td></tr>
+	
+	<tr><td><label for="batch">Batch: </label></td>
+	<td><input type="text" name="batch" value="" id="batch"></td></tr>
+
+	<tr><td><label for="guardian_name">Guardian Name</label></td>
+	<td><input type="text" name="guardian_name" value="" id="guardian_name"></td></tr>
+
+	<tr><td><label for="guardian_email">Guardian_email: </label></td>
+	<td><input type="text" name="guardian_email" value="" id="guardian_email"></td></tr>
+
+	<tr><td><label for="guradian_name">Guardian Contact</label></td>
+	<td><input type="text" name="guardian_contact" value="" id="guardian_contact"></td></tr>
+
+	<tr><td><label for="username">Username: </label></td>
+	<td><input type="text" name="username" value="" id="username"></td></tr>
+
+	<tr><td><label for="password">Password</label></td>
+	<td><input type="password" name="password" value="" id="password"></td></tr>
+
+	<tr><td></td><td><input type="submit" value="Submit" /></td></tr>
+
+</table>
+</center>
+	</form>
+-->
+
+<form class="form-horizontal" action="" method="post">{% csrf_token %}
+  <div class="form-group">
+    <label for="first_name" class="col-sm-2 control-label">First Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="first_name" name="first_name" placeholder="first name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="last_name" class="col-sm-2 control-label">Last Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="last_name" name="last_name" placeholder="last name">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" name="email" id="email" placeholder="email">
+    </div>
+  </div>
+  
+<div class="form-group">
+    <label for="contact" class="col-sm-2 control-label">Contact</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="contact" id="contact" placeholder="contact">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="batch" class="col-sm-2 control-label">Batch</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="batch" name="batch" placeholder="batch">
+    </div> 
+  </div>
+
+<div class="form-group">
+    <label for="guardian_name" class="col-sm-2 control-label">Guardian Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="guardian_name" name="guardian_name" placeholder="guardian name">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="guardian_email" class="col-sm-2 control-label">Guardian Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="guardian_email" name="guardian_email" placeholder="email">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="guardian_contact" class="col-sm-2 control-label">Guardian Contact</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="guardian_contact" name="guardian_contact" placeholder="guardian_contact">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="username" class="col-sm-2 control-label">Username</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="username" name="username" placeholder="username">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="password" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="password" name="password" placeholder="password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+</form>
+</div>
+{%endblock%}

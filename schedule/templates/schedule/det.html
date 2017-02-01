@@ -1,0 +1,27 @@
+{%extends 'welcome/bootstrap.html'%}
+{%block content%}
+
+{% if dispdet %}
+<style>
+table, td, th {
+    border: 1px solid black;
+border-collapse: collapse;
+    text-align:center;
+
+}
+
+</style>
+<ul>
+<table style="width:100%">
+<tr><th>Day No.</th><th>Day</th><th>9AM</th><th>10AM</th><th>11AM</th></tr>
+	{% for Timetable in dispdet %}
+	<tr><td>{{Timetable.Daynumber}}</td><td>{{Timetable.Day}}</td><td>{{Timetable.T9AM}}</td><td>{{Timetable.T10AM}}</td><td>{{Timetable.T11AM}}</td></tr>
+	{% endfor %}
+</table>
+
+</ul>
+
+{% else %}
+	<h3> you do not have any Research content..</h3>
+{% endif %}
+{%endblock%}
